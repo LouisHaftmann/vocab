@@ -16,24 +16,31 @@ const answerHidden = ref(true)
 <template>
   <div class="flex flex-col gap-5 w-screen h-screen max-h-[-webkit-fill-available] p-5">
     <header>JP</header>
-    <main class="flex-1 flex flex-col text-6xl items-center justify-evenly" @click="answerHidden = false">
+    <button :disabled="!answerHidden" class="flex-1 flex flex-col text-6xl items-center justify-evenly ring-2 ring-emerald-500/40 rounded-md" @click="answerHidden = false">
       <div>
-        {{ currentQuestion.question }}
+        {{ currentQuestion.translated }}
       </div>
       <div :class="[answerHidden && 'invisible']">
-        {{ currentQuestion.answer }}
+        {{ currentQuestion.native }}
       </div>
-    </main>
+    </button>
     <div class="flex gap-5">
-      <QuestionButton theme="wrong" @click="() => {
-        answerHidden = true
-        nextQuestion(true)
-      }" />
-      <QuestionButton theme="correct" @click="() => {
-        answerHidden = true
-        nextQuestion()
-      }" />
-
+      <QuestionButton
+        :disabled="answerHidden"
+        theme="wrong" @click="() => {
+          if (answerHidden) return
+          answerHidden = true
+          nextQuestion(true)
+        }"
+      />
+      <QuestionButton
+        :disabled="answerHidden"
+        theme="correct" @click="() => {
+          if (answerHidden) return
+          answerHidden = true
+          nextQuestion()
+        }"
+      />
     </div>
   </div>
 </template>

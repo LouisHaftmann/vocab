@@ -1,71 +1,69 @@
 {
-  "letters": {
-    "groups": [
-      {
-        "name": "aeiou",
-        "items": [
-          {
-            "question": "あ",
-            "answer": "a"
-          },
-          {
-            "question": "い",
-            "answer": "i"
-          },
-          {
-            "question": "う",
-            "answer": "u"
-          },
-          {
-            "question": "え",
-            "answer": "e"
-          },
-          {
-            "question": "お",
-            "answer": "o"
-          },
-          {
-            "question": "か",
-            "answer": "ki"
-          },
-          {
-            "question": "き",
-            "answer": "ki"
-          },
-          {
-            "question": "く",
-            "answer": "ku"
-          },
-          {
-            "question": "け",
-            "answer": "ke"
-          },
-          {
-            "question": "こ",
-            "answer": "ko"
-          },
-          {
-            "question": "さ",
-            "answer": "sa"
-          },
-          {
-            "question": "し",
-            "answer": "sì"
-          },
-          {
-            "question": "す",
-            "answer": "su"
-          },
-          {
-            "question": "せ",
-            "answer": "se"
-          },
-          {
-            "question": "そ",
-            "answer": "so"
-          }
-        ]
-      }
-    ]
-  }
+  "groups": [
+    {
+      "name": "aeiou",
+      "vocabulary": [
+        {
+          "translated": "あ",
+          "native": "a"
+        },
+        {
+          "translated": "い",
+          "native": "i"
+        },
+        {
+          "translated": "う",
+          "native": "u"
+        },
+        {
+          "translated": "え",
+          "native": "e"
+        },
+        {
+          "translated": "お",
+          "native": "o"
+        },
+        {
+          "translated": "か",
+          "native": "ka"
+        },
+        {
+          "translated": "き",
+          "native": "ki"
+        },
+        {
+          "translated": "く",
+          "native": "ku"
+        },
+        {
+          "translated": "け",
+          "native": "ke"
+        },
+        {
+          "translated": "こ",
+          "native": "ko"
+        },
+        {
+          "translated": "さ",
+          "native": "sa"
+        },
+        {
+          "translated": "し",
+          "native": "shi"
+        },
+        {
+          "translated": "す",
+          "native": "su"
+        },
+        {
+          "translated": "せ",
+          "native": "se"
+        },
+        {
+          "translated": "そ",
+          "native": "so"
+        }
+      ]
+    }
+  ]
 }

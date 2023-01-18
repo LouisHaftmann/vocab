@@ -2,20 +2,18 @@ import { useLocalStorage } from '@vueuse/core'
 import type { LanguageData, Lexeme } from '~~/types'
 
 const getWeightedRandomArrayIndex = (rawWeights: number[]) => {
-  const sum = rawWeights.reduce((a, b) => a + b, 0)
-
-  const random = Math.random() * sum
-
   const weights = [] as number[]
   for (let i = 0; i < rawWeights.length; i++) {
     const prev = weights[i - 1] ?? 0
     weights.push(prev + rawWeights[i])
   }
 
+  const random = Math.random() * weights[weights.length - 1]
+
   const originalWeights = [...weights]
 
   while (weights.length > 1) {
-    const pivot = Math.floor(weights.length / 2)
+    const pivot = Math.ceil(weights.length / 2)
     const weight = weights[pivot]
 
     if (random >= weight)
